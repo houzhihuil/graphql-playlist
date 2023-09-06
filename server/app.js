@@ -5,9 +5,11 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+ 
 // connect to mlab database
 // make sure to replace my db string & creds with your own
-mongoose.connect('mongodb+srv://root:7M92575Mn6QC0hjO@cluster0.na3ur4v.mongodb.net/cluster0')
+mongoose.connect('mongodb+srv://root:7M92575Mn6QC0hjO@cluster0.na3ur4v.mongodb.net/')
+
 mongoose.connection.once('open', () => {
     console.log('conneted to database');
 });
