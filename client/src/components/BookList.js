@@ -6,6 +6,7 @@ const getBooksQuery = gql`
     {
         books {
             name
+            genre
             id
         }
     }
@@ -19,7 +20,7 @@ class BookList extends Component {
         } else {
             return data.books.map(book => {
                 return(
-                    <li key={ book.id }>{ book.name }</li>
+                    <li key={ book.id }>{ book.name } - { book.genre }</li>
                 );
             })
         }
